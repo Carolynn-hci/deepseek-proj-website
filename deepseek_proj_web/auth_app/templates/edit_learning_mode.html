@@ -1,0 +1,48 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit learning mode</title>
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="{% static 'header.js' %}"></script>
+    <style>
+        body {
+            background-color: aliceblue;
+
+        }
+        #content {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+{% if user.is_authenticated %}
+    <div id = 'title-header'>
+        <ul> 
+            <li id = 'home_btn'> <button onclick = 'return_home(event)'><i class="fa fa-home fa-lg"></i> </button></li>
+            <li id = 'title'> <strong> Edit learning mode </strong></li>
+            <li id="logout-nav"> <button onclick = 'logout_nav(event)'> Logout </button></li>
+        </ul>
+    </div>
+    
+    <div class = 'main' style = 'width: 50%; margin: auto;'>
+        <form method = 'post'> 
+            {% csrf_token %}
+            <p> Changes here will not be saved until "update information" button is clicked.</p>
+            <label for = 'content'> Instructions: </label><br>
+            <textarea name = 'content' rows = 15 cols = 100 id = 'content'>{{ content }}</textarea><br>
+            <input type = 'submit' value = 'Update Information'>
+        </form>
+    </div>
+        
+{% endif %}   
+    
+    
+</body>
+</html>

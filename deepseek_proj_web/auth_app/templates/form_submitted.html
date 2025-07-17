@@ -1,0 +1,42 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form submitted!</title>
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="{% static 'header.js' %}"></script>
+    <style> 
+    body {
+        padding: 30px;
+        background-color: aliceblue;
+    }
+        .btn {
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    background-color: #6f57f8;
+    padding: 25px;
+    color: white;
+    font-size: large;
+    margin: 25px;
+        }
+        .btn:hover {
+            background-color: #624dd9;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1> Form Submitted! Details saved. </h1>
+
+    <a class = 'btn' href = '../'>Return home </a>  
+    <a class = 'btn' href = '../stream_chatbot'> Test out Learning Mode Chatbot</a>
+    
+</body>
+</html>
