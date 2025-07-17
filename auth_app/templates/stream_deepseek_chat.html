@@ -1,0 +1,49 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Streamed chat</title>
+    
+    
+    <link rel="stylesheet" href="{% static 'streamed_chat.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'header.js' %}"></script>
+    <script src="{% static 'streamed_chat.js' %}"></script>
+
+</head>
+<body>
+    <div id = 'title-header'>
+        <ul >
+            <li id = 'home_btn'> <button onclick = 'return_home(event)'><i class="fa fa-home fa-lg"></i> </button></li>
+            <li> <button onclick = 'new_chat(event)'> New Chat</button></li>
+            <li id = 'title'> <strong>Deepseek chat</strong></li>
+            <li id="logout-nav"> <button onclick = 'logout_nav(event)'> Logout </button></li>
+        </ul>
+    </div>
+    
+    
+    
+    <div id = 'chat_message_space'> </div>
+    
+    <div id = 'chat_input'>
+        <form  method = 'get' onsubmit="submit_prompt(event)">
+            <!--<label for = 'prompt'> Enter prompt to ask: </label> -->
+            <input id = 'prompt' placeholder="Ask AI..." autocomplete="off">
+
+            <button type = 'submit' id = 'submit_button'> <i class="fa fa-arrow-up fa-lg"></i></button>
+
+        </form>
+    </div>
+    
+
+    
+    
+</body>
+</html>
