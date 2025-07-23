@@ -34,4 +34,7 @@ pip install -r requirements.txt
 ```bash
 python manage.py runserver
 ```
+---
+For Futher enquiries:
+Contact Carolynn at carol22chong@gmail.com 
 
