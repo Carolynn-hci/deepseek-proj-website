@@ -35,6 +35,5 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 ---
-For Futher enquiries:
-Contact Carolynn at carol22chong@gmail.com 
+For futher enquiries: Contact Carolynn at carol22chong@gmail.com 
 
